@@ -21,15 +21,15 @@
         android:padding="16dp"
         android:text="0"
         android:textColor="@color/white"
-        android:textSize="48sp"
+        android:textSize="32sp"
         app:layout_constraintBottom_toTopOf="@+id/tableLayout"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent" />
 
     <TableLayout
         android:id="@+id/tableLayout"
-        android:layout_width="407dp"
-        android:layout_height="481dp"
+        android:layout_width="408dp"
+        android:layout_height="538dp"
         android:layout_margin="16dp"
         android:layout_marginLeft="1dp"
         android:layout_marginRight="1dp"
@@ -40,23 +40,26 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_margin="1dip">
+
+            <!-- Ligne 1 : C, + -->
 
             <Button
                 android:id="@+id/buttonC"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_span="3"
                 android:backgroundTint="@color/gray"
-                android:minHeight="100dip"
+                android:minHeight="80dip"
                 android:text="C"
                 android:textSize="22sp" />
 
             <Button
                 android:id="@+id/buttonAdd"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/orange"
                 android:minHeight="100dip"
@@ -64,12 +67,15 @@
                 android:textSize="22sp" />
         </TableRow>
 
+        <!-- Ligne 2 : 1, 2, 3, / -->
+
+
         <TableRow>
 
             <Button
                 android:id="@+id/button1"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/grayNbr"
                 android:minHeight="100dip"
@@ -79,7 +85,7 @@
             <Button
                 android:id="@+id/button2"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/grayNbr"
                 android:minHeight="100dip"
@@ -89,7 +95,7 @@
             <Button
                 android:id="@+id/button3"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/grayNbr"
                 android:minHeight="100dip"
@@ -99,7 +105,7 @@
             <Button
                 android:id="@+id/buttonDivide"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/orange"
                 android:minHeight="100dip"
@@ -107,13 +113,13 @@
                 android:textSize="22sp" />
         </TableRow>
 
-        <!-- Ligne 2 : 4, 5, 6, * -->
+        <!-- Ligne 3 : 4, 5, 6, * -->
         <TableRow>
 
             <Button
                 android:id="@+id/button4"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/grayNbr"
                 android:minHeight="100dip"
@@ -123,7 +129,7 @@
             <Button
                 android:id="@+id/button5"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/grayNbr"
                 android:minHeight="100dip"
@@ -133,7 +139,7 @@
             <Button
                 android:id="@+id/button6"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/grayNbr"
                 android:minHeight="100dip"
@@ -143,20 +149,20 @@
             <Button
                 android:id="@+id/buttonMultiply"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/orange"
                 android:minHeight="100dip"
                 android:text="*" />
         </TableRow>
 
-        <!-- Ligne 3 : 1, 2, 3, - -->
+        <!-- Ligne 4 : 7, 8, 9, - -->
         <TableRow>
 
             <Button
                 android:id="@+id/button7"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/grayNbr"
                 android:minHeight="100dip"
@@ -166,7 +172,7 @@
             <Button
                 android:id="@+id/button8"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/grayNbr"
                 android:minHeight="100dip"
@@ -176,7 +182,7 @@
             <Button
                 android:id="@+id/button9"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/grayNbr"
                 android:minHeight="100dip"
@@ -186,14 +192,14 @@
             <Button
                 android:id="@+id/buttonSubtract"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/orange"
                 android:minHeight="100dip"
                 android:text="-" />
         </TableRow>
 
-        <!-- Ligne 4 : 0, ., =, + -->
+        <!-- Ligne 5 : 0, =, . -->
 
         <TableRow
             android:layout_width="match_parent"
@@ -203,7 +209,7 @@
                 android:id="@+id/button0"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/grayNbr"
                 android:minHeight="100dip"
@@ -213,7 +219,7 @@
             <Button
                 android:id="@+id/buttonEqual"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_span="2"
                 android:layout_weight="2"
                 android:backgroundTint="@color/orange"
@@ -226,7 +232,7 @@
             <Button
                 android:id="@+id/buttonDot"
                 android:layout_width="0dp"
-                android:layout_margin="2dip"
+                android:layout_margin="1dip"
                 android:layout_weight="1"
                 android:backgroundTint="@color/grayNbr"
                 android:minHeight="100dip"
