@@ -7,7 +7,7 @@
 
     <style name="Theme.CalculatriceSimple" parent="Base.Theme.CalculatriceSimple" />
 
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Autres attributs de style ici -->
         <item name="android:windowBackground">@color/black</item>
     </style>
