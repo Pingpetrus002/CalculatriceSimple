@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView display;
+    private TextView screen;
     private double firstValue = 0;
     private double secondValue = 0;
     private Operator operator = Operator.NONE;
@@ -19,9 +19,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        display = findViewById(R.id.display);
+        screen = findViewById(R.id.display);
         setNumericButtonListeners();
         setOperatorButtonListeners();
+        setResetButtonListener();
     }
 
     private void setNumericButtonListeners() {
@@ -35,12 +36,12 @@ public class MainActivity extends AppCompatActivity {
 
         View.OnClickListener listener = v -> {
             Button button = (Button) v;
-            String currentText = display.getText().toString();
+            String currentText = screen.getText().toString();
             if (currentText.equals("0") || isOperatorPressed) {
-                display.setText(button.getText().toString());
+                screen.setText(button.getText().toString());
                 isOperatorPressed = false;
             } else {
-                display.append(button.getText().toString());
+                screen.append(button.getText().toString());
             }
         };
 
@@ -57,21 +58,30 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.buttonEqual).setOnClickListener(v -> calculateResult());
     }
 
+    private void setResetButtonListener(){
+        findViewById(R.id.buttonC).setOnClickListener(v -> {
+            screen.setText("0");
+            firstValue = 0;
+            secondValue = 0;
+            isOperatorPressed = false;
+        });
+    }
+
     private void setOperator(Operator operator) {
         this.operator = operator;
-        firstValue = Double.parseDouble(display.getText().toString());
+        firstValue = Double.parseDouble(screen.getText().toString());
         isOperatorPressed = true;
     }
 
     private void calculateResult() {
         try {
-            secondValue = Double.parseDouble(display.getText().toString());
+            secondValue = Double.parseDouble(screen.getText().toString());
             double result = performOperation(firstValue, secondValue, operator);
-            display.setText(String.valueOf(result));
+            screen.setText(String.valueOf(result));
             operator = Operator.NONE;
             isOperatorPressed = false;
         } catch (NumberFormatException e) {
-            display.setText("Error");
+            screen.setText("Error");
         }
     }
 
@@ -84,9 +94,6 @@ public class MainActivity extends AppCompatActivity {
             case MULTIPLY:
                 return a * b;
             case DIVIDE:
-                if (b == 0) {
-                    throw new IllegalArgumentException("Division by zero");
-                }
                 return a / b;
             default:
                 return 0;
